@@ -1,30 +1,36 @@
-import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import StatsCard from "@/components/dashboard/StatsCard";
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import DashboardHero from "@/components/dashboard/DashboardHero";
 
 export default function SuperAdminPage() {
   return (
-    <DashboardLayout title="Super Admin Dashboard">
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <StatsCard
-          title="Revenue"
-          value="$0"
+    <>
+      <OpportunityBackground />
+
+      <div className="space-y-8">
+        <DashboardHero
+          title="Super Admin"
+          subtitle="Full platform management and security controls."
         />
 
-        <StatsCard
-          title="Subscriptions"
-          value="0"
-        />
+        <div
+          className="
+            rounded-3xl
+            border
+            border-yellow-500/20
+            bg-white/5
+            p-8
+          "
+        >
+          <h2 className="text-white text-2xl font-bold">
+            System Controls
+          </h2>
 
-        <StatsCard
-          title="Admins"
-          value="0"
-        />
-
-        <StatsCard
-          title="System Logs"
-          value="0"
-        />
+          <p className="mt-4 text-slate-400">
+            User management, logs, analytics
+            and platform controls will be loaded here.
+          </p>
+        </div>
       </div>
-    </DashboardLayout>
+    </>
   );
 }

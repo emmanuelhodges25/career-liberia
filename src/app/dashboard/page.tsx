@@ -1,30 +1,44 @@
-import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import StatsCard from "@/components/dashboard/StatsCard";
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import DashboardHero from "@/components/dashboard/DashboardHero";
+import StatsCards from "@/components/dashboard/StatsCards";
 
 export default function DashboardPage() {
   return (
-    <DashboardLayout title="User Dashboard">
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <StatsCard
-          title="Saved Jobs"
-          value="0"
+    <>
+      <OpportunityBackground />
+
+      <div className="space-y-8">
+        <DashboardHero
+          title="Dashboard"
+          subtitle="Manage applications, jobs, profile and opportunities."
         />
 
-        <StatsCard
-          title="Applications"
-          value="0"
-        />
+        <StatsCards />
 
-        <StatsCard
-          title="Messages"
-          value="0"
-        />
+        <div
+          className="
+            rounded-3xl
+            border
+            border-white/10
+            bg-white/5
+            p-8
+          "
+        >
+          <h2
+            className="
+              text-2xl
+              font-bold
+              text-white
+            "
+          >
+            Recent Activity
+          </h2>
 
-        <StatsCard
-          title="Notifications"
-          value="0"
-        />
+          <p className="mt-4 text-slate-400">
+            Activity data will load from API.
+          </p>
+        </div>
       </div>
-    </DashboardLayout>
+    </>
   );
 }

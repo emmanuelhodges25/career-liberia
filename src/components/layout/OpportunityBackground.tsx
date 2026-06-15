@@ -1,0 +1,50 @@
+export default function OpportunityBackground() {
+  return (
+    <>
+      <div
+        className="
+          fixed
+          top-0
+          left-0
+          h-100
+          w-100
+          rounded-full
+          bg-cyan-500/10
+          blur-[120px]
+          animate-pulse
+          pointer-events-none
+        "
+      />
+
+      <div
+        className="
+          fixed
+          bottom-0
+          right-0
+          h-112.5
+          w-112.5
+          rounded-full
+          bg-red-500/10
+          blur-[120px]
+          animate-pulse
+          pointer-events-none
+        "
+      />
+
+      <div
+        className="
+          fixed
+          left-1/2
+          top-1/3
+          h-87.5
+          w-87.5
+          -translate-x-1/2
+          rounded-full
+          bg-purple-500/10
+          blur-[120px]
+          pointer-events-none
+        "
+      />
+    </>
+  );
+}

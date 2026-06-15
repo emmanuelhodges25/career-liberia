@@ -1,30 +1,35 @@
-import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import StatsCard from "@/components/dashboard/StatsCard";
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import DashboardHero from "@/components/dashboard/DashboardHero";
 
 export default function AdminPage() {
   return (
-    <DashboardLayout title="Admin Dashboard">
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <StatsCard
-          title="Pending Jobs"
-          value="0"
+    <>
+      <OpportunityBackground />
+
+      <div className="space-y-8">
+        <DashboardHero
+          title="Admin Dashboard"
+          subtitle="Moderate jobs, users and reports."
         />
 
-        <StatsCard
-          title="Users"
-          value="0"
-        />
+        <div
+          className="
+            rounded-3xl
+            border
+            border-red-500/20
+            bg-white/5
+            p-8
+          "
+        >
+          <h2 className="text-white text-2xl font-bold">
+            Admin Controls
+          </h2>
 
-        <StatsCard
-          title="Reports"
-          value="0"
-        />
-
-        <StatsCard
-          title="Companies"
-          value="0"
-        />
+          <p className="mt-4 text-slate-400">
+            Approval workflows will connect to backend.
+          </p>
+        </div>
       </div>
-    </DashboardLayout>
+    </>
   );
 }

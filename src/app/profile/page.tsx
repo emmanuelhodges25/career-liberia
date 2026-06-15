@@ -1,85 +1,71 @@
+import Link from "next/link";
+
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import DashboardHero from "@/components/dashboard/DashboardHero";
+
 export default function ProfilePage() {
   return (
-    <div className="space-y-8">
-      <div
-        className="
-          rounded-3xl
-          border
-          border-white/10
-          bg-white/5
-          p-8
-          backdrop-blur-xl
-        "
-      >
-        <div className="flex flex-col gap-6 md:flex-row md:items-center">
-          <div
+    <>
+      <OpportunityBackground />
+
+      <div className="space-y-8">
+        <DashboardHero
+          title="My Profile"
+          subtitle="Manage your personal information."
+        />
+
+        <div
+          className="
+            rounded-3xl
+            border
+            border-white/10
+            bg-white/5
+            p-8
+          "
+        >
+          <div className="flex items-center gap-5">
+            <div
+              className="
+                h-24
+                w-24
+                rounded-full
+                bg-red-600
+              "
+            />
+
+            <div>
+              <h2
+                className="
+                  text-2xl
+                  font-bold
+                  text-white
+                "
+              >
+                Your Name
+              </h2>
+
+              <p className="text-slate-400">
+                user@email.com
+              </p>
+            </div>
+          </div>
+
+          <Link
+            href="/profile/edit"
             className="
-              flex
-              h-28
-              w-28
-              items-center
-              justify-center
-              rounded-full
-              bg-linear-to-r
-              from-red-500
-              to-red-700
-              text-3xl
-              font-bold
+              mt-6
+              inline-flex
+              rounded-xl
+              bg-red-600
+              px-5
+              py-3
               text-white
             "
           >
-            U
-          </div>
-
-          <div>
-            <h1 className="text-3xl font-bold text-white">
-              User Profile
-            </h1>
-
-            <p className="mt-2 text-slate-400">
-              Your professional identity on HireMe Liberia.
-            </p>
-          </div>
+            Edit Profile
+          </Link>
         </div>
       </div>
-
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div
-          className="
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            p-6
-          "
-        >
-          <h2 className="mb-4 text-xl font-semibold text-white">
-            About
-          </h2>
-
-          <p className="text-slate-400">
-            Profile information will load from backend.
-          </p>
-        </div>
-
-        <div
-          className="
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            p-6
-          "
-        >
-          <h2 className="mb-4 text-xl font-semibold text-white">
-            Skills
-          </h2>
-
-          <p className="text-slate-400">
-            Skills section coming soon.
-          </p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }

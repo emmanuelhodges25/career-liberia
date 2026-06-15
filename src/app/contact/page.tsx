@@ -6,7 +6,7 @@ export default function ContactPage() {
           Contact Us
         </h1>
 
-        <p className="mt-3 text-slate-400">
+        <p className="mt-3 text-blue-700">
           We do love to hear from you.
         </p>
       </div>
@@ -23,18 +23,18 @@ export default function ContactPage() {
         <div className="grid gap-4">
           <input
             placeholder="Your Name"
-            className="rounded-xl bg-black/30 p-4 text-white"
+            className="rounded-xl bg-black/30 p-4 text-black"
           />
 
           <input
             placeholder="Email Address"
-            className="rounded-xl bg-black/30 p-4 text-white"
+            className="rounded-xl bg-black/30 p-4 text-black"
           />
 
           <textarea
             rows={6}
             placeholder="Message"
-            className="rounded-xl bg-black/30 p-4 text-white"
+            className="rounded-xl bg-black/30 p-4 text-blue"
           />
 
           <button

@@ -1,45 +1,17 @@
-interface Props {
-  params: {
-    id: string;
-  };
-}
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import OpportunityDetailLayout from "@/components/opportunities/OpportunityDetailLayout";
 
-export default function JobDetailsPage({
-  params,
-}: Props) {
+export default function JobDetailsPage() {
   return (
-    <div className="space-y-6">
-      <div
-        className="
-          rounded-3xl
-          border
-          border-white/10
-          bg-white/5
-          p-8
-        "
-      >
-        <h1 className="text-3xl font-bold text-blue-800">
-          Job Details
-        </h1>
+    <>
+      <OpportunityBackground />
 
-        <p className="mt-3 text-slate-400">
-          Job ID: {params.id}
-        </p>
-      </div>
-
-      <div
-        className="
-          rounded-3xl
-          border
-          border-dashed
-          border-white/10
-          p-12
-        "
-      >
-        <p className="text-slate-400">
-          Job information will load from backend.
-        </p>
-      </div>
-    </div>
+      <OpportunityDetailLayout
+        category="Job"
+        title="Software Engineer"
+        organization="HireMe Liberia"
+        location="Monrovia"
+      />
+    </>
   );
 }

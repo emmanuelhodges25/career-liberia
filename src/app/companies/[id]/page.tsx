@@ -1,45 +1,17 @@
-interface Props {
-  params: {
-    id: string;
-  };
-}
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import OpportunityDetailLayout from "@/components/opportunities/OpportunityDetailLayout";
 
-export default function CompanyDetailsPage({
-  params,
-}: Props) {
+export default function CompanyDetailsPage() {
   return (
-    <div className="space-y-6">
-      <div
-        className="
-          rounded-3xl
-          border
-          border-white/10
-          bg-white/5
-          p-8
-        "
-      >
-        <h1 className="text-3xl font-bold text-white">
-          Company Details
-        </h1>
+    <>
+      <OpportunityBackground />
 
-        <p className="mt-3 text-slate-400">
-          Company ID: {params.id}
-        </p>
-      </div>
-
-      <div
-        className="
-          rounded-3xl
-          border
-          border-dashed
-          border-white/10
-          p-12
-        "
-      >
-        <p className="text-slate-400">
-          Company information will load from backend.
-        </p>
-      </div>
-    </div>
+      <OpportunityDetailLayout
+        category="Company"
+        title="Orange Liberia"
+        organization="Telecommunications"
+        location="Monrovia"
+      />
+    </>
   );
 }

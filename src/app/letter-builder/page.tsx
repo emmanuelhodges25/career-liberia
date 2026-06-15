@@ -37,7 +37,7 @@ export default function LetterBuilderPage() {
               rounded-xl
               bg-black/30
               p-4
-              text-white
+              text-black
             "
           />
 
@@ -52,7 +52,7 @@ export default function LetterBuilderPage() {
               rounded-xl
               bg-black/30
               p-4
-              text-white
+              text-black
             "
           />
 
@@ -67,7 +67,7 @@ export default function LetterBuilderPage() {
               rounded-xl
               bg-black/30
               p-4
-              text-white
+              text-black
             "
           />
 
@@ -83,7 +83,7 @@ export default function LetterBuilderPage() {
               rounded-xl
               bg-black/30
               p-4
-              text-white
+              text-black
             "
           />
 

@@ -1,51 +1,81 @@
 import Link from "next/link";
 
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import OpportunityHero from "@/components/opportunities/OpportunityHero";
+import OpportunityGrid from "@/components/opportunities/OpportunityGrid";
+
 export default function ScholarshipsPage() {
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-4xl font-bold text-white">
-          Scholarships
-        </h1>
+    <>
+      <OpportunityBackground />
 
-        <p className="mt-2 text-slate-400">
-          Discover scholarship opportunities across Liberia.
-        </p>
-      </div>
+      <div className="relative space-y-10">
+        <OpportunityHero
+          badge="Verified Employers"
+          title="Scholarships"
+          description="
+          Discover trusted scholarships from top companies,
+          startups, NGOs and organizations
+          actively hiring across Liberia.
+          "
+        />
 
-      <div
-        className="
-          rounded-3xl
-          border
-          border-white/10
-          bg-white/5
-          p-12
-          text-center
-        "
-      >
-        <h2 className="text-2xl font-semibold text-white">
-          No Scholarships Available Yet
-        </h2>
+        <OpportunityGrid
+          title="Featured scholarships"
+        />
 
-        <p className="mt-3 text-slate-400">
-          Scholarship listings will appear here once recruiters publish opportunities.
-        </p>
-
-        <Link
-          href="/register"
+        <section
           className="
-            mt-6
-            inline-block
-            rounded-xl
-            bg-red-600
-            px-6
-            py-3
-            text-white
+            rounded-3xl
+            border
+            border-cyan-500/20
+            bg-linear-to-br
+            from-cyan-950/20
+            via-slate-950
+            to-red-950/20
+            p-10
+            text-center
           "
         >
-          Join HireMe Liberia
-        </Link>
+          <h2
+            className="
+              text-3xl
+              font-bold
+              text-white
+            "
+          >
+            Looking For Scholarships?
+          </h2>
+
+          <p
+            className="
+              mt-4
+              text-slate-300
+            "
+          >
+            Create your profile and
+            connect with recruiters,
+            companies and opportunities.
+          </p>
+
+          <Link
+            href="/register"
+            className="
+              mt-6
+              inline-flex
+              rounded-xl
+              bg-red-600
+              px-6
+              py-3
+              text-white
+              transition
+              hover:bg-red-500
+            "
+          >
+            Join Career Liberia
+          </Link>
+        </section>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,45 +1,17 @@
-interface Props {
-  params: {
-    id: string;
-  };
-}
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import OpportunityDetailLayout from "@/components/opportunities/OpportunityDetailLayout";
 
-export default function InternshipDetailsPage({
-  params,
-}: Props) {
+export default function InternshipDetailsPage() {
   return (
-    <div className="space-y-6">
-      <div
-        className="
-          rounded-3xl
-          border
-          border-white/10
-          bg-white/5
-          p-8
-        "
-      >
-        <h1 className="text-3xl font-bold text-white">
-          Internship Details
-        </h1>
+    <>
+      <OpportunityBackground />
 
-        <p className="mt-3 text-slate-400">
-          Internship ID: {params.id}
-        </p>
-      </div>
-
-      <div
-        className="
-          rounded-3xl
-          border
-          border-dashed
-          border-white/10
-          p-12
-        "
-      >
-        <p className="text-slate-400">
-          Internship information will load from backend.
-        </p>
-      </div>
-    </div>
+      <OpportunityDetailLayout
+        category="Internship"
+        title="Marketing Intern"
+        organization="Startup Liberia"
+        location="Monrovia"
+      />
+    </>
   );
 }

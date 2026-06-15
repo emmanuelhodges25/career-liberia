@@ -27,7 +27,7 @@ export default function DeveloperPage() {
             Emmanuel Hodges
           </h1>
 
-          <p className="mt-4 max-w-2xl text-slate-500">
+          <p className="mt-4 max-w-2xl text-slate-800">
             I am a Junior Developer passionate about evolving through
             learning resources, graphics design, digital solutions,
             and technology innovation.
@@ -45,15 +45,15 @@ export default function DeveloperPage() {
             p-6
           "
         >
-          <h2 className="text-xl font-semibold text-blue-500">
+          <h2 className="text-xl font-semibold text-blue-800">
             Contact
           </h2>
 
-          <p className="mt-3 text-slate-400">
+          <p className="mt-3 text-slate-800">
             Phone: +231 770 376 793
           </p>
 
-          <p className="mt-2 text-slate-400">
+          <p className="mt-2 text-slate-800">
             Email: emmanuelhodges17@gmail.com
           </p>
         </div>
@@ -67,11 +67,11 @@ export default function DeveloperPage() {
             p-6
           "
         >
-          <h2 className="text-xl font-semibold text-blue-500">
+          <h2 className="text-xl font-semibold text-blue-800">
             Skills
           </h2>
 
-          <ul className="mt-4 space-y-2 text-slate-500">
+          <ul className="mt-4 space-y-2 text-slate-800">
             <li>Web Development</li>
             <li>UI/UX Design</li>
             <li>Graphics Design</li>

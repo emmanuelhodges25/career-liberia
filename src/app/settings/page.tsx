@@ -1,53 +1,58 @@
+import OpportunityBackground from "@/components/layout/OpportunityBackground";
+import DashboardHero from "@/components/dashboard/DashboardHero";
+
 export default function SettingsPage() {
   return (
-    <div className="space-y-8">
-      <h1 className="text-4xl font-bold text-white">
-        Settings
-      </h1>
+    <>
+      <OpportunityBackground />
 
-      <div className="grid gap-6">
-        <div
-          className="
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            p-6
-          "
-        >
-          <h2 className="text-xl text-white">
-            Account Settings
-          </h2>
-        </div>
+      <div className="space-y-8">
+        <DashboardHero
+          title="Settings"
+          subtitle="Manage account preferences."
+        />
 
         <div
           className="
             rounded-3xl
             border
-            border-white/10
+            border-cyan-500/20
             bg-white/5
-            p-6
+            p-8
+            space-y-6
           "
         >
-          <h2 className="text-xl text-white">
-            Privacy Settings
-          </h2>
-        </div>
+          <div>
+            <h3 className="text-white font-semibold">
+              Email Notifications
+            </h3>
 
-        <div
-          className="
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            p-6
-          "
-        >
-          <h2 className="text-xl text-white">
-            Notification Settings
-          </h2>
+            <p className="text-slate-400">
+              Receive updates by email.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold">
+              Privacy Settings
+            </h3>
+
+            <p className="text-slate-400">
+              Manage profile visibility.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold">
+              Security
+            </h3>
+
+            <p className="text-slate-400">
+              Change password and enable 2FA.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
